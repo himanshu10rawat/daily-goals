@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: rgb(72, 163, 0, 0.07);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #48A300;
+    border-radius: 8px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.focus-on-today {
+    background-color: rgb(72, 163, 0, 0.07);
+    padding: 36px 15px;
+}
+
+.focus-on-today h1 {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+    color: #48A300;
+    line-height: 96px;
+}
+
+.focus-on-today h1 span {
+    color: #61481C;
+}
+
+.main-content {
+    background-color: #FBFBFB;
+    border-radius: 15px;
+    padding: 19px 48px 55px 42px;
+    width: 660px;
+    margin: auto;
+    margin-top: 47px;
+}
+
+.heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.heading .sun-icon {
+    position: relative;
+}
+
+.heading .sun-icon .sun-mouth {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.heading .sun-icon .sun-eye {
+    position: absolute;
+    top: 22px;
+}
+
+.heading .sun-icon .sun-eye.left {
+    left: 20px;
+}
+
+.heading .sun-icon .sun-eye.right {
+    right: 20px;
+}
+
+.heading .sun-icon .sun-icon {
+    animation: sunrotate linear infinite 2s;
+}
+
+@keyframes sunrotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.progress-bar-section {
+    margin-top: 30px;
+}
+
+.progress-bar-section p {
+    color: #858585;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.progress-bar-section .progress-bar {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgba(72, 163, 0, 0.1);
+    overflow: hidden;
+}
+
+.progress-bar-section .progress-bar .fill-color {
+    background-color: rgba(72, 163, 0, 1);
+    border-radius: 15px;
+    width: 0;
+    height: 100%;
+    color: rgb(232 242 225);
+    line-height: 15px;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: left;
+    transition: width ease-in-out 0.3s;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar-section .progress-bar .fill-color span {
+    margin-left: 1rem;
+}
+
+.progress-bar-section .warning-text {
+    color: rgba(255, 81, 81, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 0;
+    margin-top: 18px;
+    visibility: hidden;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.form .input-box {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding-inline: 22px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+}
+
+.form .input-box+.input-box {
+    margin-top: 46px;
+}
+
+.form .input-box .check-box {
+    border: 2px solid rgba(97, 72, 28, 0.3);
+    background-color: rgb(255, 255, 255);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form .input-box .check-box img {
+    display: none;
+}
+
+.form .input-box.completed .check-box {
+    background-color: #48A300;
+    border-color: #48A300;
+}
+
+.form .input-box.completed .check-box img {
+    display: block;
+}
+
+.form .input-box.completed .label {
+    color: #48A300;
+    text-decoration-line: line-through;
+}
+
+.form .input-box .label {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    line-height: 24px;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding-block: 27px;
+}
+
+.form .input-box .label::placeholder {
+    color: rgba(217, 217, 217, 1);
+}
+
+.footer-section {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 50px;
+}
+
+.madeby {
+    color: rgba(133, 133, 133, 1);
+    margin-top: 44px;
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+}
+
+.add-goal {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #48A300;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 6px 6px 8px 4px rgba(153, 153, 153, 0.7);
+    transition: ease-in-out 0.3s;
+}
+
+.add-goal:hover {
+    background-color: #397e00;
+    transform: translate(5px, -50%);
+}
+
+.add-goal:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.add-goal:disabled:hover {
+    background-color: #48A300;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 700px) {
+    .main-content {
+        width: 100%;
+    }
+}
